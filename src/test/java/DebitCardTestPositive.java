@@ -26,7 +26,6 @@ public class DebitCardTestPositive {
         options.addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(options);
         driver.get("http://localhost:9999");
-
     }
 
     @AfterEach
@@ -44,7 +43,6 @@ public class DebitCardTestPositive {
         String expected = "Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.";
         String actual = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText().trim();
         assertEquals(expected, actual);
-
     }
 
 }
